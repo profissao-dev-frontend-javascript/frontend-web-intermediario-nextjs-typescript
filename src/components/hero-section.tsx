@@ -3,7 +3,6 @@
 import { SearchResult } from "@/model/SearchResult";
 import { useState } from "react";
 import SearchForm from "./search-form";
-import Link from "next/link";
 
 export default function HeroSection() {
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
