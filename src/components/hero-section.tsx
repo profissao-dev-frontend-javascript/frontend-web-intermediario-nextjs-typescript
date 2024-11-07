@@ -26,6 +26,8 @@ export default function HeroSection() {
           <h2 className="text-lg font-bold">Search Results</h2>
 
           <div className="flex flex-col my-4 gap-4">
+            {searchResults.length === 0 && <div>No results found.</div>}
+
             {/* Search Result Card */}
             {searchResults.map((searchResult, index) => (
               <a
