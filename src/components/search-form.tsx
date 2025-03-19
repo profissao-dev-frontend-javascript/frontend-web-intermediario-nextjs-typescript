@@ -35,6 +35,7 @@ export default function SearchForm(props: SearchFormProps) {
       <input
         type="text"
         name="search_input"
+        data-test="search_input"
         placeholder="Search for learning resources, tutorials..."
         className="border-2 border-gray-300 px-2 py-1 w-full rounded-lg"
         disabled={isLoading}
@@ -42,6 +43,7 @@ export default function SearchForm(props: SearchFormProps) {
 
       <input
         type="submit"
+        data-test="search_button"
         className="bg-indigo-500 text-white px-4 rounded-lg hover:bg-indigo-400 cursor-pointer"
         value={isLoading ? "Loading..." : "Search"}
         disabled={isLoading}

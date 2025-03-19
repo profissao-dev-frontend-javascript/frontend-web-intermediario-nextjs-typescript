@@ -33,6 +33,7 @@ export default function HeroSection() {
               <a
                 href={searchResult.url}
                 key={`searchResult_${index}`}
+                data-test={`search_result_${index}`}
                 className="flex flex-col p-2 border rounded-lg shadow text-left hover:bg-gray-100"
               >
                 <h3 className="font-bold">{searchResult.title}</h3>
