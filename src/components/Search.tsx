@@ -3,20 +3,15 @@
 import { SearchResult } from "@/model/SearchResult";
 import { useState } from "react";
 import SearchForm from "./search-form";
+import HeroSection from "./HeroSection";
 
-export default function HeroSection() {
+export default function Search() {
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
 
   return (
     <section className="flex flex-col items-center">
       <div className="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
-        <p className="mb-4 font-semibold text-indigo-500 md:mb-6 md:text-lg xl:text-xl">
-          Transforming Learning with AI Assistance
-        </p>
-
-        <h1 className="mb-8 text-4xl font-bold text-black sm:text-5xl md:mb-12 md:text-6xl">
-          A New Era for Interactive Education
-        </h1>
+        <HeroSection />
 
         <SearchForm onSearchResultsReady={setSearchResults} />
 

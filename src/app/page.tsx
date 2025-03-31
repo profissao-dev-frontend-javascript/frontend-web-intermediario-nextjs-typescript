@@ -1,7 +1,7 @@
 "use client";
 
 import Header from "@/components/Header";
-import HeroSection from "@/components/hero-section";
+import Search from "@/components/Search";
 // import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
@@ -29,7 +29,7 @@ export default function Home() {
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         <Header />
 
-        <HeroSection />
+        <Search />
       </div>
     </div>
   );
