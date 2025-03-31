@@ -2,7 +2,7 @@
 
 import { SearchResult } from "@/model/SearchResult";
 import { useState } from "react";
-import SearchForm from "./search-form";
+import SearchForm from "./SearchForm";
 import HeroSection from "./HeroSection";
 import Footer from "./Footer";
 
