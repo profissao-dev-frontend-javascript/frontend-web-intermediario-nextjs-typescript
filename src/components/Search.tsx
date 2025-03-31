@@ -4,6 +4,7 @@ import { SearchResult } from "@/model/SearchResult";
 import { useState } from "react";
 import SearchForm from "./search-form";
 import HeroSection from "./HeroSection";
+import Footer from "./Footer";
 
 export default function Search() {
   const [searchResults, setSearchResults] = useState<SearchResult[]>([]);
@@ -40,19 +41,7 @@ export default function Search() {
         </div>
       </div>
 
-      {/* social - start */}
-      <div className="flex items-center justify-center gap-4 lg:justify-start">
-        <span className="text-sm font-semibolds tracking-widest text-gray-400 sm:text-base">
-          Powered by{" "}
-          <a
-            href="https://plataforma.salvatore.academy/course/frontend-web-intermediario"
-            className="underline"
-          >
-            salvatore.academy ➡️
-          </a>
-        </span>
-      </div>
-      {/* social - end */}
+      <Footer />
     </section>
   );
 }
