@@ -3,6 +3,7 @@
 import { ConversationDomain } from "@/app/api/conversation/route";
 import ConversationForm from "./ConversationForm";
 import { useState } from "react";
+import Markdown from "react-markdown";
 
 export default function Conversation() {
   const [conversationDomain, setConversationDomain] =
@@ -20,7 +21,9 @@ export default function Conversation() {
         <div className="my-2 py-2 px-1 bg-gray-100 w-full text-left">
           <h3 className="font-bold text-md pb-2">Resposta:</h3>
 
-          <div>{conversationDomain.response}</div>
+          <div>
+            <Markdown>{conversationDomain.response}</Markdown>
+          </div>
         </div>
       )}
     </>
