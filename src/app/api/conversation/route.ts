@@ -5,7 +5,23 @@ export interface UpsertConversationDto {
   input: string;
 }
 
-export async function POST(request: NextRequest): Promise<NextResponse<[]>> {
+export enum ConversationStatus {
+  PROCESSING = "PROCESSING",
+  COMPLETED = "COMPLETED",
+}
+
+export interface ConversationDomain {
+  id: string;
+  input: string;
+  response: string | null;
+  respondedAt: Date | null;
+  status: ConversationStatus;
+  conversationId: string;
+}
+
+export async function POST(
+  request: NextRequest
+): Promise<NextResponse<ConversationDomain>> {
   const data = await request.formData();
   const [firstEntry] = data.entries();
 
@@ -26,7 +42,7 @@ export async function POST(request: NextRequest): Promise<NextResponse<[]>> {
       body: JSON.stringify(dto),
     });
 
-    const result = await response.json();
+    const result: ConversationDomain = await response.json();
     return NextResponse.json(result);
   } catch (error) {
     console.error("Erro ao buscar dados da API:", error);

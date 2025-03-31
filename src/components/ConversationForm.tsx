@@ -1,7 +1,11 @@
+import {
+  ConversationDomain,
+  ConversationStatus,
+} from "@/app/api/conversation/route";
 import { FormEvent, useState } from "react";
 
 interface ConversationFormProps {
-  onResponse: (response: []) => void;
+  onResponse: (response: ConversationDomain) => void;
 }
 
 export default function ConversationForm(props: ConversationFormProps) {
@@ -20,7 +24,7 @@ export default function ConversationForm(props: ConversationFormProps) {
     });
 
     if (response.status === 200) {
-      const data: [] = await response.json();
+      const data: ConversationDomain = await response.json();
       console.log({ data });
 
       props.onResponse(data);
