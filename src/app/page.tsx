@@ -4,27 +4,27 @@ import HeroSection from "@/components/hero-section";
 import Image from "next/image";
 import Link from "next/link";
 import LogoSA from "/public/logo-sa.svg";
-import { signIn, signOut, useSession } from "next-auth/react";
+// import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
-  const { data: session } = useSession();
+  // const { data: session } = useSession();
   // console.log({ session });
 
-  if (session) {
-    return (
-      <>
-        Signed in as {session.user?.email} <br />
-        <button onClick={() => signOut()}>Sign out</button>
-      </>
-    );
-  }
+  // if (session) {
+  //   return (
+  //     <>
+  //       Signed in as {session.user?.email} <br />
+  //       <button onClick={() => signOut()}>Sign out</button>
+  //     </>
+  //   );
+  // }
 
-  return (
-    <>
-      Not signed in <br />
-      <button onClick={() => signIn()}>Sign in</button>
-    </>
-  );
+  // return (
+  //   <>
+  //     Not signed in <br />
+  //     <button onClick={() => signIn()}>Sign in</button>
+  //   </>
+  // );
 
   return (
     <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
