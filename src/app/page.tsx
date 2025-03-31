@@ -1,5 +1,6 @@
 "use client";
 
+import Conversation from "@/components/Conversation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -26,7 +27,7 @@ export default function Home() {
   // );
 
   return (
-    <div className="bg-white pb-6 sm:pb-8 lg:pb-12">
+    <div className="bg-white text-black pb-6 sm:pb-8 lg:pb-12">
       <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
         <Header />
 
@@ -35,6 +36,8 @@ export default function Home() {
             <HeroSection />
 
             {/* <Search /> */}
+
+            <Conversation />
           </div>
         </section>
 
