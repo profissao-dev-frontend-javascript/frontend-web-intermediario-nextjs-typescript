@@ -17,6 +17,7 @@ export default function Conversation() {
     <>
       <ConversationForm onResponse={onResponse} />
 
+      {/* TODO: Desafio: Exibir carregamento da resposta quando iniciar o processamento */}
       {conversationDomain && (
         <div className="my-2 py-2 px-1 bg-gray-100 w-full text-left">
           <h3 className="font-bold text-md pb-2">Resposta:</h3>

@@ -1,10 +1,8 @@
-import {
-  ConversationDomain,
-  ConversationStatus,
-} from "@/app/api/conversation/route";
+import { ConversationDomain } from "@/app/api/conversation/route";
 import { FormEvent, useState } from "react";
 
 interface ConversationFormProps {
+  // TODO: Desafio: Implementar função `onStart`
   onResponse: (response: ConversationDomain) => void;
 }
 
@@ -40,12 +38,11 @@ export default function ConversationForm(props: ConversationFormProps) {
 
   return (
     <form className="flex gap-2 text-black w-full" onSubmit={onSubmit}>
-      <input
-        type="text"
+      <textarea
         name="input"
         data-test="input"
         placeholder="Ask a technical question"
-        className="border-2 border-gray-300 px-2 py-1 w-full rounded-lg"
+        className="border-2 border-gray-300 px-2 py-1 w-full rounded-lg min-h-12 max-h-48"
         disabled={isLoading}
       />
 
