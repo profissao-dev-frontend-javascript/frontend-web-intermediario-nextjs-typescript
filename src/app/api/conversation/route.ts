@@ -32,7 +32,8 @@ export async function POST(
   };
 
   try {
-    const url = `http://localhost:3333/conversation`;
+    const backendApiUrl = process.env.BACKEND_API_URL;
+    const url = `${backendApiUrl}/conversation`;
 
     const response = await fetch(url, {
       method: "POST",
