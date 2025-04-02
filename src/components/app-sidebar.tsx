@@ -3,7 +3,6 @@
 import * as React from "react";
 
 import useApiListConversations from "@/app/hook/useApiListConversations";
-import { SearchForm } from "@/components/search-form";
 import {
   Sidebar,
   SidebarContent,
@@ -22,7 +21,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   return (
     <Sidebar {...props}>
       <SidebarHeader>
-        <SearchForm />
+        {/* TODO: Implement SearchForm */}
+        {/* <SearchForm /> */}
       </SidebarHeader>
       <SidebarContent>
         {isLoading && "Loading..."}

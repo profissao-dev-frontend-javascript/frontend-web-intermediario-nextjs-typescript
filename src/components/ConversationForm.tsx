@@ -25,6 +25,10 @@ export default function ConversationForm(props: ConversationFormProps) {
       const data: ConversationDomain = await response.json();
       console.log({ data });
 
+      {
+        /* TODO: Refresh SideBar after create a new conversation */
+      }
+
       props.onResponse(data);
     } else {
       // TODO: Implement toastify to show a beautiful error message
