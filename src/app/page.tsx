@@ -1,10 +1,6 @@
 "use client";
 
 import CreateConversation from "@/components/CreateConversation";
-import Footer from "@/components/Footer";
-import Header from "@/components/Header";
-import HeroSection from "@/components/HeroSection";
-import ListConversation from "@/components/ListConversation";
 // import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
@@ -29,23 +25,28 @@ export default function Home() {
 
   return (
     <div className="bg-white text-black pb-6 sm:pb-8 lg:pb-12">
-      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-        <Header />
-
-        <section className="flex flex-col items-center">
-          <div className="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
-            <HeroSection />
-
-            {/* <Search /> */}
-
-            <ListConversation />
-
-            <CreateConversation />
-          </div>
-        </section>
-
-        <Footer />
+      <div className="mx-auto max-w-screen-2xl p-4 md:px-8">
+        <CreateConversation />
       </div>
     </div>
+    // <div className="bg-white text-black pb-6 sm:pb-8 lg:pb-12">
+    //   <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+    //     <Header />
+
+    //     <section className="flex flex-col items-center">
+    //       <div className="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
+    //         <HeroSection />
+
+    //         {/* <Search /> */}
+
+    //         <ListConversation />
+
+    //         <CreateConversation />
+    //       </div>
+    //     </section>
+
+    //     <Footer />
+    //   </div>
+    // </div>
   );
 }
