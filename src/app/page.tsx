@@ -1,6 +1,6 @@
 "use client";
 
-import Conversation from "@/components/Conversation";
+import CreateConversation from "@/components/CreateConversation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
@@ -37,7 +37,7 @@ export default function Home() {
 
             {/* <Search /> */}
 
-            <Conversation />
+            <CreateConversation />
           </div>
         </section>
 

@@ -5,7 +5,7 @@ import ConversationForm from "./ConversationForm";
 import { useState } from "react";
 import Markdown from "react-markdown";
 
-export default function Conversation() {
+export default function CreateConversation() {
   const [conversationDomain, setConversationDomain] =
     useState<ConversationDomain>();
 
