@@ -1,6 +1,6 @@
 "use client";
 
-import { ConversationDomain } from "@/app/api/conversation/route";
+import { ConversationDomain } from "@/app/api/_domain/ConversationDomain";
 import ConversationForm from "./ConversationForm";
 import { useState } from "react";
 import Markdown from "react-markdown";

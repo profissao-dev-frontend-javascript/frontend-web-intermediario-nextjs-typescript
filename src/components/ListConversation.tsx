@@ -1,4 +1,4 @@
-import { ConversationDomain } from "@/app/api/conversation/route";
+import { ConversationDomain } from "@/app/api/_domain/ConversationDomain";
 import { useEffect, useState } from "react";
 
 export default function ListConversation() {

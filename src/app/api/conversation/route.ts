@@ -1,23 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
-
-export interface UpsertConversationDto {
-  id?: string;
-  input: string;
-}
-
-export enum ConversationStatus {
-  PROCESSING = "PROCESSING",
-  COMPLETED = "COMPLETED",
-}
-
-export interface ConversationDomain {
-  id: string;
-  input: string;
-  response: string | null;
-  respondedAt: Date | null;
-  status: ConversationStatus;
-  conversationId: string;
-}
+import { UpsertConversationDto } from "../_domain/UpsertConversationDto";
+import { ConversationDomain } from "../_domain/ConversationDomain";
 
 export async function GET(): Promise<NextResponse<ConversationDomain[]>> {
   try {
