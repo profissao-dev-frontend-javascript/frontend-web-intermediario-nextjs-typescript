@@ -4,6 +4,7 @@ import CreateConversation from "@/components/CreateConversation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
+import ListConversation from "@/components/ListConversation";
 // import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
@@ -36,6 +37,8 @@ export default function Home() {
             <HeroSection />
 
             {/* <Search /> */}
+
+            <ListConversation />
 
             <CreateConversation />
           </div>

@@ -19,6 +19,26 @@ export interface ConversationDomain {
   conversationId: string;
 }
 
+export async function GET(): Promise<NextResponse<ConversationDomain[]>> {
+  try {
+    const backendApiUrl = process.env.BACKEND_API_URL;
+    const url = `${backendApiUrl}/conversation`;
+
+    const response = await fetch(url, {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json",
+      },
+    });
+
+    const result: ConversationDomain[] = await response.json();
+    return NextResponse.json(result);
+  } catch (error) {
+    console.error("Erro ao buscar dados da API:", error);
+    throw new Error("Falha na busca, tente novamente.");
+  }
+}
+
 export async function POST(
   request: NextRequest
 ): Promise<NextResponse<ConversationDomain>> {
