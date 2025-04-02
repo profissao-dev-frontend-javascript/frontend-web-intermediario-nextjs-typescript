@@ -1,3 +1,5 @@
+"use client";
+
 import { useEffect, useState } from "react";
 import { ConversationDomain } from "../api/_domain/ConversationDomain";
 

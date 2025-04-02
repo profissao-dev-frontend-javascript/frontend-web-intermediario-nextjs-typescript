@@ -1,16 +1,10 @@
 "use client";
 
-import { AppSidebar } from "@/components/app-sidebar";
 import CreateConversation from "@/components/CreateConversation";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import HeroSection from "@/components/HeroSection";
 import ListConversation from "@/components/ListConversation";
-import {
-  SidebarInset,
-  SidebarProvider,
-  SidebarTrigger,
-} from "@/components/ui/sidebar";
 // import { signIn, signOut, useSession } from "next-auth/react";
 
 export default function Home() {
@@ -34,48 +28,24 @@ export default function Home() {
   // );
 
   return (
-    <SidebarProvider>
-      <AppSidebar />
+    <div className="bg-white text-black pb-6 sm:pb-8 lg:pb-12">
+      <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
+        <Header />
 
-      <SidebarInset>
-        <header className="flex h-16 shrink-0 items-center gap-2 border-b px-4">
-          <SidebarTrigger className="-ml-1" />
-          {/* <Separator orientation="vertical" className="mr-2 h-4" />
-          <Breadcrumb>
-            <BreadcrumbList>
-              <BreadcrumbItem className="hidden md:block">
-                <BreadcrumbLink href="#">
-                  Building Your Application
-                </BreadcrumbLink>
-              </BreadcrumbItem>
-              <BreadcrumbSeparator className="hidden md:block" />
-              <BreadcrumbItem>
-                <BreadcrumbPage>Data Fetching</BreadcrumbPage>
-              </BreadcrumbItem>
-            </BreadcrumbList>
-          </Breadcrumb> */}
-        </header>
+        <section className="flex flex-col items-center">
+          <div className="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
+            <HeroSection />
 
-        <div className="bg-white text-black pb-6 sm:pb-8 lg:pb-12">
-          <div className="mx-auto max-w-screen-2xl px-4 md:px-8">
-            <Header />
+            {/* <Search /> */}
 
-            <section className="flex flex-col items-center">
-              <div className="flex max-w-xl flex-col items-center pb-16 pt-8 text-center lg:pb-48 lg:pt-32">
-                <HeroSection />
+            <ListConversation />
 
-                {/* <Search /> */}
-
-                <ListConversation />
-
-                <CreateConversation />
-              </div>
-            </section>
-
-            <Footer />
+            <CreateConversation />
           </div>
-        </div>
-      </SidebarInset>
-    </SidebarProvider>
+        </section>
+
+        <Footer />
+      </div>
+    </div>
   );
 }
